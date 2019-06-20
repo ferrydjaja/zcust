@@ -26,12 +26,12 @@
 										</form:FormElement>
 										<form:FormElement visible="true">
 											<form:label>
-												<Label text="Company Code" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit"
+												<Label text="Credit Control Area" design="Standard" width="100%" required="true" textAlign="Begin" textDirection="Inherit"
 													visible="true"/>
 											</form:label>
 											<form:fields>
-												<Input id="company_code"
-													value="{ path : '/company_code', type : 'sap.ui.model.type.String', constraints : { minLength : 3, maxLength : 20, search:'^[ A-Za-z0-9]*$' } }"
+												<Input id="credit_control_area"
+													value="{ path : '/credit_control_area', type : 'sap.ui.model.type.String', constraints : { minLength : 3, maxLength : 20, search:'^[ A-Za-z0-9]*$' } }"
 													type="Text" showValueHelp="false" enabled="true" visible="true" width="auto" valueHelpOnly="false" maxLength="20"
 													change="handleDetailsChange"/>
 											</form:fields>

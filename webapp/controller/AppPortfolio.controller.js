@@ -49,6 +49,7 @@ sap.ui.define([
 			var oModel = new JSONModel();
 			oModel = sap.ui.getCore().getModel("searchq");
 			var company_code = oModel.getData().company_code;
+			var credit_control_area = oModel.getData().credit_control_area;
 			
 			var bpModel = this.getOwnerComponent().getModel("bpModel");
 			console.log(bpModel);
@@ -57,8 +58,8 @@ sap.ui.define([
 			var oTable = this.getView().byId("table");
 			oTable.setModel(bpModel);
 			var filters = [];
-			filters.push(new Filter("COMPANY_CODE", FilterOperator.Contains, company_code));
-			filters.push(new Filter("INSTRUMENT_TYPE", FilterOperator.Contains, 'IT'));
+			filters.push(new Filter("COMPANY_CODE", FilterOperator.EQ, company_code));
+			filters.push(new Filter("CREDIT_CONTROL_AREA_BSAD", FilterOperator.EQ, credit_control_area));
 			
 			oTable.bindItems({
 				path: '/CUSTPAY',

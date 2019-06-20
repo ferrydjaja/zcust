@@ -46,7 +46,7 @@ sap.ui.define([
 			var oModel = new JSONModel();
 			oModel.setData({
 				company_code: null,
-				product_name_long: null,
+				credit_control_area: null,
 			});
 			this.getView().setModel(oModel);
 
@@ -54,10 +54,12 @@ sap.ui.define([
 
 		onSearch: function(oEvent) {
 			var company_code = this.byId("company_code").getValue().trim();
+			var credit_control_area = this.byId("credit_control_area").getValue().trim();
 			
 			var oModel = new JSONModel();
 			oModel.setData({
-				company_code: company_code
+				company_code: company_code,
+				credit_control_area: credit_control_area
 			});
 			sap.ui.getCore().setModel(oModel, "searchq");
             
