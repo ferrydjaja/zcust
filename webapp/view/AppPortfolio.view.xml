@@ -1,0 +1,54 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" controllerName="zcust.zcust.controller.AppPortfolio"
+	height="100%">
+	<Shell>
+		<App busy="{appView>/busy}" class="sapUiSizeCompact">
+			<pages>
+				<Page showHeader="true" title="Search" showFooter="true" showNavButton="true" navButtonText="Back" navButtonTap="doNavBack"
+					enableScrolling="false">
+					<ScrollContainer height="100%" width="100%" horizontal="false" vertical="true">
+						<content>
+							<Table id="table" fixedLayout="false" growing="true" growingScrollToLoad="true">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="AR Cleared Line Items" level="H2"/>
+										<ToolbarSpacer></ToolbarSpacer>
+										<Button icon="sap-icon://download" press="onDataExport"/>
+									</Toolbar>
+								</headerToolbar>
+								<columns>
+									<Column>
+										<Text text="Company Code"/>
+									</Column>
+									<Column>
+										<Text text="Credit Control Area"/>
+									</Column>
+									<Column>
+										<Text text="Instrument Type"/>
+									</Column>
+								</columns>
+								<items>
+									<ColumnListItem id="columnListItem">
+										<cells>
+											<Text text="{COMPANY_CODE}"/>
+										</cells>
+										<cells>
+											<Text text="{CREDIT_CONTROL_AREA_BSAD}"/>
+										</cells>
+										<cells>
+											<Text text="{INSTRUMENT_TYPE}"/>
+										</cells>
+										<cells>
+											<Text text="{INSTRUMENT_TYPE}"/>
+										</cells>
+									</ColumnListItem>
+								</items>
+							</Table>
+						</content>
+					</ScrollContainer>
+					<subHeader/>
+					<customHeader/>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
